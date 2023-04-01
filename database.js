@@ -1,12 +1,8 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
-const URI = ''
-
-mongoose.set('useNewUrlParser', true)
-mongoose.set('useFindAndModify', false)
-mongoose.set('useCreateIndex', true)
-mongoose.set('useInifiedTopology', true)
+//const URI = `mongodb://localhost:27017/salao-na-mao`
 
 mongoose
-  .connect(URI)
-  .then(() => console.log('DB is UP!'))
+  .connect('mongodb://localhost:27017/salao-na-mao')
+  .then(() => console.log('DB ON '))
   .catch((err) => console.log(err))
